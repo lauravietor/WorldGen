@@ -11,7 +11,8 @@
 class SimplexNoise2D
 {
 public:
-    SimplexNoise2D(std::mt19937_64 &rng);
+    template <typename T> requires std::uniform_random_bit_generator<T> SimplexNoise2D(T &gen);
+    SimplexNoise2D(std::mt19937_64 &gen);
 	double sample(double x, double y);
 private:
 	std::array<glm::vec2, DIRECTIONS_COUNT> directions;

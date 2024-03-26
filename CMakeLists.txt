@@ -10,16 +10,16 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets OpenGL OpenGLWidgets)
 
 set(OpenGL_GL_PREFERENCE GLVND)
 find_package(OpenGL REQUIRED)
 
 set(PROJECT_SOURCES
         src/main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/ui/mainwindow.cpp
+        include/ui/mainwindow.h
+        src/ui/mainwindow.ui
         src/simplexnoise2d.cpp
         include/simplexnoise2d.h
         src/wavefunctioncollapse/chunk.cpp
@@ -32,6 +32,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(WorldGen
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        include/wavefunctioncollapse/state.h src/wavefunctioncollapse/state.cpp
+        include/ui/mapwidget.h src/ui/mapwidget.cpp
+        assets.qrc
+        include/worldgenerator.h src/worldgenerator.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET WorldGen APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -52,7 +56,7 @@ else()
 endif()
 
 target_include_directories(WorldGen PRIVATE include/)
-target_link_libraries(WorldGen PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(WorldGen PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::OpenGL Qt${QT_VERSION_MAJOR}::OpenGLWidgets)
 
 add_subdirectory(external/glm/)
 target_link_libraries(WorldGen PRIVATE glm)

@@ -1,0 +1,122 @@
+[
+    {
+        "id": 0,
+        "name": "grass1",
+        "texture": "grass1.png"
+    },
+    {
+        "id": 1,
+        "name": "grass2",
+        "texture": "grass2.png"
+    },
+    {
+        "id": 2,
+        "name": "grass3",
+        "texture": "grass3.png"
+    },
+    {
+        "id": 3,
+        "name": "flowers1",
+        "texture": "flowers1.png"
+    },
+    {
+        "id": 4,
+        "name": "flowers2",
+        "texture": "flowers2.png"
+    },
+    {
+        "id": 5,
+        "name": "flowers3",
+        "texture": "flowers3.png"
+    },
+    {
+        "id": 6,
+        "name": "bush1",
+        "texture": "bush1.png"
+    },
+    {
+        "id": 7,
+        "name": "bush2",
+        "texture": "bush2.png"
+    },
+    {
+        "id": 8,
+        "name": "cold_grass1",
+        "texture": "cold_grass1.png"
+    },
+    {
+        "id": 9,
+        "name": "cold_grass2",
+        "texture": "cold_grass2.png"
+    },
+    {
+        "id": 10,
+        "name": "cold_flowers1",
+        "texture": "cold_flowers1.png"
+    },
+    {
+        "id": 11,
+        "name": "cold_flowers2",
+        "texture": "cold_flowers2.png"
+    },
+    {
+        "id": 12,
+        "name": "cold_bush1",
+        "texture": "cold_bush1.png"
+    },
+    {
+        "id": 13,
+        "name": "cold_bush2",
+        "texture": "cold_bush2.png"
+    },
+    {
+        "id": 14,
+        "name": "snow1",
+        "texture": "snow1.png"
+    },
+    {
+        "id": 15,
+        "name": "snow2",
+        "texture": "snow2.png"
+    },
+    {
+        "id": 16,
+        "name": "snow3",
+        "texture": "snow3.png"
+    },
+    {
+        "id": 17,
+        "name": "snow_bush1",
+        "texture": "snow_bush1.png"
+    },
+    {
+        "id": 18,
+        "name": "snow_bush2",
+        "texture": "snow_bush2.png"
+    },
+    {
+        "id": 19,
+        "name": "snow_bush3",
+        "texture": "snow_bush3.png"
+    },
+    {
+        "id": 20,
+        "name": "water1",
+        "texture": "water1.png"
+    },
+    {
+        "id": 21,
+        "name": "lilypad1",
+        "texture": "lilypad1.png"
+    },
+    {
+        "id": 22,
+        "name": "lilypad2",
+        "texture": "lilypad2.png"
+    },
+    {
+        "id": 23,
+        "name": "lilypad3",
+        "texture": "lilypad3.png"
+    }
+]

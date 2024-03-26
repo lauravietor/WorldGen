@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/biomes.json</file>
+        <file>assets/tiles.json</file>
+        <file>assets/textures/bush1.png</file>
+        <file>assets/textures/bush2.png</file>
+        <file>assets/textures/cold_bush1.png</file>
+        <file>assets/textures/cold_bush2.png</file>
+        <file>assets/textures/cold_flowers1.png</file>
+        <file>assets/textures/cold_flowers2.png</file>
+        <file>assets/textures/cold_grass1.png</file>
+        <file>assets/textures/cold_grass2.png</file>
+        <file>assets/textures/flowers1.png</file>
+        <file>assets/textures/flowers2.png</file>
+        <file>assets/textures/flowers3.png</file>
+        <file>assets/textures/grass1.png</file>
+        <file>assets/textures/grass2.png</file>
+        <file>assets/textures/grass3.png</file>
+        <file>assets/textures/lilypad1.png</file>
+        <file>assets/textures/lilypad2.png</file>
+        <file>assets/textures/lilypad3.png</file>
+        <file>assets/textures/snow1.png</file>
+        <file>assets/textures/snow2.png</file>
+        <file>assets/textures/snow3.png</file>
+        <file>assets/textures/snow_bush1.png</file>
+        <file>assets/textures/snow_bush2.png</file>
+        <file>assets/textures/snow_bush3.png</file>
+        <file>assets/textures/water1.png</file>
+        <file>assets/shaders/world_map.frag</file>
+        <file>assets/shaders/world_map.vert</file>
+        <file>assets/shaders/world.frag</file>
+        <file>assets/shaders/world.vert</file>
+    </qresource>
+</RCC>

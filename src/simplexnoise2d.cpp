@@ -1,11 +1,13 @@
-#include "../include/simplexnoise2d.h"
+#include "simplexnoise2d.h"
 #include <cmath>
 #include <numbers>
 #include <algorithm>
 
 using std::numbers::pi;
 
-SimplexNoise2D::SimplexNoise2D(std::mt19937_64 &rng)
+template <typename T>
+requires std::uniform_random_bit_generator<T>
+SimplexNoise2D::SimplexNoise2D(T &gen)
 {
 	for (int i = 0; i < DIRECTIONS_COUNT; i++)
 	{
@@ -13,7 +15,18 @@ SimplexNoise2D::SimplexNoise2D(std::mt19937_64 &rng)
 								  sin(2.0 * pi * (double)i / (double)DIRECTIONS_COUNT));
 	}
 
-	std::shuffle(directions.begin(), directions.end(), rng);
+    std::shuffle(directions.begin(), directions.end(), gen);
+}
+
+SimplexNoise2D::SimplexNoise2D(std::mt19937_64 &gen)
+{
+    for (int i = 0; i < DIRECTIONS_COUNT; i++)
+    {
+        directions[i] = glm::vec2(cos(2.0 * pi * (double)i / (double)DIRECTIONS_COUNT),
+                                  sin(2.0 * pi * (double)i / (double)DIRECTIONS_COUNT));
+    }
+
+    std::shuffle(directions.begin(), directions.end(), gen);
 }
 
 double SimplexNoise2D::sample(double x, double y)
